@@ -25,7 +25,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a todo application built with a polyglot microservices architecture:
+This is a sytem-desgin-dojo application built with a polyglot microservices architecture:
 
 - **Frontend**: Web UI (planned - directory currently empty)
 - **Java Backend**: RESTful API service (planned - directory currently empty) 
@@ -81,13 +81,13 @@ curl https://start.spring.io/starter.tgz \
   -d javaVersion=17 \
   -d type=maven-project \
   -d groupId=com.example \
-  -d artifactId=todo-api | tar -xzf -
+  -d artifactId=sytem-desgin-dojo-api | tar -xzf -
 ```
 
 **Rust Backend:**
 ```bash
 cd rust/
-cargo init --name todo-rust
+cargo init --name sytem-desgin-dojo-rust
 ```
 
 ### Service Development Commands
