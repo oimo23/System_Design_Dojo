@@ -1,0 +1,19 @@
+FROM openjdk:17-jdk-slim
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y ca-certificates wget && \
+    update-ca-certificates && \
+    keytool -importcert -file /etc/ssl/certs/ca-certificates.crt -alias system -keystore $JAVA_HOME/lib/security/cacerts -storepass changeit -noprompt || true && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY gradlew .
+COPY gradle gradle
+COPY build.gradle .
+
+RUN chmod +x ./gradlew
+
+EXPOSE 8003
+
+# 開発時は bootRun を使用してホットリロードを有効にする
+CMD ["./gradlew", "bootRun", "--no-daemon"]

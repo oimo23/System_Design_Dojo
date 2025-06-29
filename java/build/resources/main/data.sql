@@ -1,0 +1,58 @@
+-- Sample questions for system design interviews
+
+INSERT INTO questions (title, description, category, difficulty, key_points, sample_solution, active, created_at, updated_at) VALUES 
+('大規模SNSサービスの設計', 
+'月間アクティブユーザー数1億人のSNSサービス（Twitter/X類似）を設計してください。ユーザーは投稿、フォロー、いいね、コメントができます。', 
+'SNS・ソーシャルメディア', 
+'HARD',
+'タイムライン生成の戦略（push vs pull）、フォロワー数の多いユーザーのハンドリング、投稿の配信方法、キャッシュ戦略、データベースのスケーリング',
+'ファンアウト戦略の使い分け、Redis/Memcachedでのタイムラインキャッシュ、読み書き分離、シャーディング戦略、CDN活用',
+true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('動画ストリーミングサービスの設計',
+'Netflix/YouTubeのような大規模動画ストリーミングサービスを設計してください。動画のアップロード、エンコーディング、配信機能が必要です。',
+'メディア・ストリーミング',
+'HARD',
+'動画エンコーディングパイプライン、CDNでの配信、adaptive bitrate streaming、メタデータ管理、レコメンデーション',
+'マルチリージョンCDN、非同期動画処理、マイクロサービス アーキテクチャ、ML basedレコメンデーション',
+true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('チャットアプリケーションの設計',
+'WhatsApp/LINEのようなリアルタイムチャットアプリケーションを設計してください。1対1チャット、グループチャット、オンライン状態表示が必要です。',
+'リアルタイム通信',
+'MEDIUM',
+'WebSocket vs Long Polling、メッセージの配信保証、オンライン状態の管理、プッシュ通知、E2E暗号化',
+'WebSocket clusters、メッセージキュー、Redis Pub/Sub、モバイルプッシュ通知サービス',
+true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('eコマースサイトの設計',
+'Amazon/楽天のような大規模eコマースサイトを設計してください。商品カタログ、在庫管理、注文処理、決済処理が必要です。',
+'eコマース',
+'MEDIUM',
+'在庫整合性、注文処理のトランザクション、検索機能のスケーリング、レコメンデーション、決済の信頼性',
+'分散トランザクション、Elasticsearch/Solr、イベントソーシング、CQRS、eventual consistency',
+true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('URL短縮サービスの設計',
+'bit.ly/TinyURLのようなURL短縮サービスを設計してください。カスタムURL、アクセス分析、有効期限設定が可能です。',
+'Webサービス',
+'EASY',
+'URL encoding戦略、データベース設計、キャッシュ活用、アクセス統計の収集、スケーラビリティ',
+'Base62 encoding、Redis caching、分散カウンター、非同期分析処理',
+true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('検索エンジンの設計',
+'Googleのような検索エンジンを設計してください。Web crawling、インデックス作成、クエリ処理、ランキングが必要です。',
+'検索・情報検索',
+'HARD',
+'クローリング戦略、倒置インデックス、PageRankアルゴリズム、分散インデックス、クエリ最適化',
+'分散crawling、sharded indexing、MapReduce、機械学習ランキング',
+true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+('配車サービスの設計',
+'Uber/Lyftのような配車サービスを設計してください。ドライバーマッチング、リアルタイム位置追跡、料金計算が必要です。',
+'位置情報・モバイル',
+'MEDIUM',
+'地理的インデックス、ドライバーマッチングアルゴリズム、リアルタイム位置更新、料金計算、需要予測',
+'Geohashing、QuadTree、Kafka streaming、動的料金設定アルゴリズム',
+true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);

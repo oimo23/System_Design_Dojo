@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(npx create-react-app:*)",
+      "Bash(cargo:*)",
+      "Bash(mkdir:*)",
+      "Bash(docker-compose up:*)",
+      "Bash(docker-compose:*)",
+      "Bash(chmod:*)",
+      "Bash(curl:*)",
+      "Bash(unzip:*)",
+      "Bash(cp:*)",
+      "Bash(rm:*)",
+      "Bash(docker build:*)",
+      "Bash(mv:*)",
+      "Bash(true)",
+      "Bash(./gradlew:*)",
+      "Bash(java:*)",
+      "Bash(docker run:*)",
+      "Bash(docker stop:*)",
+      "Bash(docker rm:*)",
+      "Bash(docker logs:*)",
+      "Bash(npm install:*)",
+      "Bash(npm start)",
+      "Bash(pkill:*)",
+      "Bash(docker system prune:*)",
+      "Bash(docker tag:*)",
+      "Bash(gradle build:*)",
+      "Bash(npm run build:*)"
+    ],
+    "deny": []
+  }
+}
